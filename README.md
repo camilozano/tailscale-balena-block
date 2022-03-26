@@ -1,12 +1,14 @@
-# hslatman/tailscale-balena-block
+# calozano/tailscale-balena-block
 
 Runs a [Tailscale](https://tailscale.com/) node on a Balena device
+
+Fork adds Exit Node option for Tailscale
 
 ## Setup and configuration
 
 Use this as standalone with the button below:
 
-[![tailscale block deploy with balena](/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/hslatman/tailscale-balena-block)
+[![tailscale block deploy with balena](/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/calozano/tailscale-balena-block)
 
 Or add the following service to your docker-compose.yml:
 

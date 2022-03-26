@@ -42,6 +42,6 @@ fi
 
 tailscaled --tun=userspace-networking -state=/tailscale/tailscaled.state &
 sleep 5
-tailscale up -authkey "${TAILSCALE_KEY}" -hostname "${TAILSCALE_HOSTNAME}" $@
+tailscale up -authkey "${TAILSCALE_KEY}" -hostname "${TAILSCALE_HOSTNAME}" --advertise-exit-node $@
 
 fg

@@ -1,16 +1,16 @@
 name: tailscale
 description: Run a Tailscale node on a Balena device
-version: 0.0.1
+version: 0.0.2
 type: sw.block
 assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/hslatman/tailscale-balena-block'
+      url: 'https://github.com/camilozano/tailscale-balena-block'
   logo:
     type: blob.asset
     data:
-      url: https://raw.githubusercontent.com/hslatman/tailscale-balena-block/main/logo.png
+      url: https://raw.githubusercontent.com/calozano/tailscale-balena-block/main/logo.png
 data:
   applicationEnvironmentVariables:
     - TAILSCALE_KEY: <YOUR_TAILSCALE_KEY>

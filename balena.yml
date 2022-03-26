@@ -10,7 +10,7 @@ assets:
   logo:
     type: blob.asset
     data:
-      url: https://raw.githubusercontent.com/calozano/tailscale-balena-block/main/logo.png
+      url: https://raw.githubusercontent.com/camilozano/tailscale-balena-block/main/logo.png
 data:
   applicationEnvironmentVariables:
     - TAILSCALE_KEY: <YOUR_TAILSCALE_KEY>

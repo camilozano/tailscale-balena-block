@@ -1,0 +1,34 @@
+name: Build and publish container to Balena
+
+on:
+  pull_request:
+    types: [opened, synchronize, closed]
+    branches:
+      - master
+      - main
+  push:
+    tags:
+      - "v*.*.*"
+    #branches: [main]
+    
+jobs:
+  balena:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        fleet:
+          [
+            herman/tailscale-armv7hf,
+            herman/tailscale-aarch64,
+            herman/tailscale-amd64,
+          ]
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: balena-io/deploy-to-balena-action@v0.13.1
+        with:
+          balena_token: ${{ secrets.BALENA_TOKEN }}
+          environment: balena-cloud.com
+          fleet: ${{ matrix.fleet }}
+          #versionbot: true
